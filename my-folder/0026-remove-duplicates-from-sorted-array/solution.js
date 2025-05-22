@@ -3,14 +3,16 @@
  * @return {number}
  */
 var removeDuplicates = function(nums) {
+const removeDuplicates = [];
+ nums.forEach(n => {
+    if(removeDuplicates.includes(n)) return;
+    else  removeDuplicates.push(n);
+ });
+ nums.splice(removeDuplicates.length);
 
-   for(let i = 0;i < nums.length;i++){
-    for(let j=i+1;j<nums.length;j++){
-      if(nums[i] === nums[j]){
-        nums.splice(j,1);
-        j--;
-      }
-    }
-   }
-    return nums.length;
+ for(let i=0;i<removeDuplicates.length;i++){
+    nums[i] = removeDuplicates[i];
+ }
+
+ return nums.length;
 };
