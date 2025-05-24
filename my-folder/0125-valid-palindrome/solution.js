@@ -16,5 +16,4 @@ var isPalindrome = function(s) {
 
     if(newWord === reverseWord) return true;
     else                       return false;
-
 };
