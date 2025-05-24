@@ -8,11 +8,9 @@ var strStr = function(haystack, needle) {
  const haystackLength = haystack.length;
 
  for(let i = 0;i < haystackLength;i++){
-    
     if(haystack[i] === needle[0]){
-      if ( haystack.slice(i,i + needleLength) === needle) return i;
+      if ( haystack.slice(i,i+needleLength) === needle) return i;
     }
  }
- return -1;
-    
+ return -1;   
 };
