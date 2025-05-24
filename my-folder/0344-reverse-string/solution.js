@@ -7,6 +7,5 @@ var reverseString = function(s) {
     for(let i=s.length-1;i>=0;i--){
        s[i] = sArr[s.length-1-i];
     }
-
     return s;
 };
