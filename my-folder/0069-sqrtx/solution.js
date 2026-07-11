@@ -20,7 +20,7 @@ var mySqrt = function(x) {
 
 
     // binary search method
-    if(x <2) return x;
+    if(x < 2) return x;
 
     let start = 1;
     let end = x;
