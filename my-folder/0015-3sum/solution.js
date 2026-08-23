@@ -59,6 +59,41 @@ var threeSum = function(nums) {
   }
 
   return results;
+
+  // let left=0;
+  // let right=nums.length-1;
+  // const seen = new Set();
+
+  // while(left<right){
+  //   const target = -(nums[left]+nums[right]);
+
+  //   if(target>=nums[left] && target<=nums[right]){
+  //     // in this case we are assuming that from the left and right should exist,if it exists in that case the left and right update seems correct if not then may their exists some triplet with either left and right in it that case is simple ignored here that's why this implemnetation is wrong to begin with;
+
+  //     let low=left+1;
+  //     let hi=right-1;
+
+  //     while(low<=hi){
+  //       const mid = Math.floor((low+hi)/2);
+
+  //       if(nums[mid]===target){
+  //         const targetTriplet = `${nums[left]},${nums[mid]},${nums[right]}`;
+  //         if(!seen.has(targetTriplet)){
+  //           results.push([nums[left],nums[mid],nums[right]]);
+  //           seen.add(targetTriplet);
+  //         }
+  //         left++;
+  //         right--;
+  //       }
+  //       else if(nums[mid]<target) low=mid+1;
+  //       else                      hi=mid-1;
+  //     }
+  //   }
+  //   else if(target<nums[left]) left++;
+  //   else                       right--; 
+  // }
+
+  // return results;
 };
 
 
