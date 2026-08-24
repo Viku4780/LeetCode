@@ -3,5 +3,9 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 var sortColors = function(nums) {
-    return nums.sort((a,b) => a-b);
+   for(let left=0;left<nums.length-1;left++){
+     for(let ryt=nums.length-1;ryt>left;ryt--){
+      if(nums[left]>nums[ryt]) [nums[left],nums[ryt]] = [nums[ryt],nums[left]];
+    }
+   }
 };
