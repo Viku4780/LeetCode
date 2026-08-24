@@ -3,34 +3,6 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 var nextPermutation = function(nums) {
-    /*
-    let right = nums.length-1;
-    let subArrIn ;
-    let max;
-
-    if(nums.sort((a,b) => b-a).join('') === nums.join('')) return nums.sort((a,b) => a-b);
-    
-    for(let i=nums.length-2;i>=0;i--){
-        if(nums[right]>nums[i-1]){
-           subArrIn = i-1;
-           max = right;
-           break;
-        }
-        right--;
-    }
-    let subArr = nums.splice(subArrIn);
-    const b = subArr[0];
-    subArr[0] = subArr[1];
-    subArr[1] = b;
-
-    let partSort = subArr.slice(1);
-
-    partSort.sort((a,b) => a-b);
-
-    subArr = subArr.slice(0,1).concat(partSort);
-
-    return nums.concat(subArr);
-    */
 
     let i = nums.length - 2;
 
@@ -61,3 +33,5 @@ var nextPermutation = function(nums) {
     return nums;
 
 };
+
+
