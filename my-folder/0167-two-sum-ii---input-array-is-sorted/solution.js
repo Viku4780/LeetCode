@@ -28,33 +28,34 @@ var twoSum = function(numbers, target) {
 
 
    // two pointer solution
+   let left = 0;
+   let right = numbers.length-1;
 
-  //  let left = 0;
-  //  let right = numbers.length-1;
-
-  //  while(left < right){
-  //   const sum = numbers[left] + numbers[right];
-  //   if(sum === target) return [left+1, right+1];
-  //   else if(sum < target) left++;
-  //   else                  right--;
-  //  }
-
+   while(left < right){
+    const sum = numbers[left] + numbers[right];
+    if(sum === target) return [left+1, right+1];
+    else if(sum < target) left++;
+    else                  right--;
+   }
 
 
-  for(let i=0;i<numbers.length-1;i++){
-    const rem=target-numbers[i];
 
-    let low=i+1;
-    let hi=numbers.length-1;
+  // binary search
+  
+  // for(let i=0;i<numbers.length-1;i++){
+  //   const rem=target-numbers[i];
 
-    while(low<=hi){
-      const mid = Math.floor((low+hi)/2);
+  //   let low=i+1;
+  //   let hi=numbers.length-1;
 
-      if(numbers[mid]===rem) return [i+1,mid+1];
-      else if(numbers[mid]<rem) low=mid+1;
-      else                         hi=mid-1;
-    }
-  }
+  //   while(low<=hi){
+  //     const mid = Math.floor((low+hi)/2);
+
+  //     if(numbers[mid]===rem) return [i+1,mid+1];
+  //     else if(numbers[mid]<rem) low=mid+1;
+  //     else                         hi=mid-1;
+  //   }
+  // }
 
   
 };
