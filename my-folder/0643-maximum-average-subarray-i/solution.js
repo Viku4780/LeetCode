@@ -20,5 +20,6 @@ var findMaxAverage = function(nums, k) {
      maxVal = Math.max(maxVal,currentVal); 
   }
   }
-  return Number((maxVal/k).toFixed(5));
+  // return Number((maxVal/k).toFixed(5));
+  return maxVal/k;
 };
