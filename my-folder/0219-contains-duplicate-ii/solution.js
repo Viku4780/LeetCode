@@ -22,3 +22,21 @@ var containsNearbyDuplicate = function(nums, k) {
     return false;
 };
 
+// var containsNearbyDuplicate = function(nums, k){
+//   const set = new Set();
+//   let left=0;
+
+//   for(let i=0;i<nums.length;i++){
+//     if(set.has(nums[i])){
+//       while(set.has(nums[i])){
+//           set.delete(nums[left]);
+//           left++;
+//       }
+//       if(i-left+1<=k) return true;
+//       set.add(nums[i]);
+//     }
+//     else  set.add(nums[i]);
+//   }
+
+//   return false;
+// };
