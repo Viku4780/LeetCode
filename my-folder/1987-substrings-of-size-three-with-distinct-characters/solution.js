@@ -4,14 +4,27 @@
  */
 var countGoodSubstrings = function(s) {
     let count = 0;
-    let str = s.slice(0,3);
-    
-     if(new Set(str).size === 3) count++;
 
-    for(let i=1;i<=s.length-3;i++){
-    let newStr = s.slice(i,i+3);
+    const checkDuplicates = (left,right) => {
+      const set = new Set();
 
-    if(new Set(newStr).size === 3) count++;
+      while(left<=right){
+        if(set.has(s[left]) || set.has(s[right])){
+          return true;
+        }else{
+          if(left!==right && s[left]===s[right]) return true;
+          set.add(s[left]);
+          set.add(s[right]);
+          left++;
+          right--;
+        }
+      }
+      return false;
     }
-    return count;
+    
+    for(let i=2;i<s.length;i++){
+      if(!checkDuplicates(i-2,i)) count++;
+    }
+
+   return count;
 };
