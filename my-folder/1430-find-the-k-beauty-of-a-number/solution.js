@@ -9,7 +9,7 @@ var divisorSubstrings = function(num, k) {
 
     for(let i=0;i<=str.length-k;i++){
         let newDiv = parseInt(str.slice(i,i+k));
-        if((num/newDiv)%1 === 0 && newDiv !== 0) kBeauty++;
+        if(num%newDiv === 0 && newDiv !== 0) kBeauty++;
     }
     return kBeauty;
 };
